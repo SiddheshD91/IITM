@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Train Ticket System</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <ul>
+            <li><a href="#" onclick="showSection('dashboard')">Dashboard</a></li>
+            <li><a href="#" onclick="showSection('manage-trains')">Manage Trains</a></li>
+            <li><a href="#" onclick="showSection('view-bookings')">View Bookings</a></li>
+            <li><a href="#" onclick="showSection('active-users')">Active Users</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section">
+            <h1>Dashboard Overview</h1>
+            <p>Welcome to the admin dashboard! You can manage trains, view bookings, and monitor users.</p>
+        </section>
+
+        <!-- Manage Trains Section -->
+        <section id="manage-trains" class="section hidden">
+            <h1>Manage Trains</h1>
+            <form id="train-form">
+                <label for="trainNumber">Train Number:</label>
+                <input type="text" id="trainNumber" required>
+                
+                <label for="trainName">Train Name:</label>
+                <input type="text" id="trainName" required>
+
+                <label for="route">Route:</label>
+                <input type="text" id="route" required>
+
+                <label for="schedule">Schedule:</label>
+                <input type="text" id="schedule" required>
+
+                <button type="submit">Add/Update Train</button>
+            </form>
+
+            <h2>Train List</h2>
+            <ul id="trainList"></ul>
+        </section>
+
+        <!-- View Bookings Section -->
+        <section id="view-bookings" class="section hidden">
+            <h1>View Bookings</h1>
+            <p>Here you can view all the bookings.</p>
+            <ul id="bookingList"></ul>
+        </section>
+
+        <!-- Active Users Section -->
+        <section id="active-users" class="section hidden">
+            <h1>Active Users</h1>
+            <p>Here you can monitor active users.</p>
+            <ul id="userList"></ul>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

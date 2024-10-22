@@ -1,0 +1,22 @@
+*{
+    font-family: cursive;
+}
+#first{
+    color: blue
+}
+#first>p{
+    color: red;
+}
+
+article p{
+    color:green;
+}
+
+.purple{
+    color: purple
+}
+.highlight{
+    background-color: cyan;
+    font-size: 30px;
+    font-style: italic;
+}
